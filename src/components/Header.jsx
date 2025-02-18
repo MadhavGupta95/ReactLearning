@@ -1,14 +1,17 @@
-import { useState } from "react"
+import React, { useState } from 'react'
 
-
-const Header = ({handleAdd})=>{
-    const [inputText, setInputText] = useState("")
-    return(
-        <div>
-            <input onChange={e=>setInputText(e.target.value)} placeholder="enter your inputs" type="text"/>
-            <button onClick={()=>handleAdd(inputText)}>Add</button>
-        </div>
-    )
+const Header = ({handleSearch}) => {
+    const [query, setQuery] = useState("")
+    const handleChange = (e)=>setQuery(e.target.value)
+    const onSearch = ()=>{
+        handleSearch(query)
+    }
+  return (
+    <div>
+        <input onChange={handleChange} type='text'></input>
+        <button onClick={onSearch}>search</button>
+    </div>
+  )
 }
 
 export default Header
