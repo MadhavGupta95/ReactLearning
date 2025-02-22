@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import './css/Header.css'
+
+
 
 const Header = ({handleSearch, loader}) => {
     const [query, setQuery] = useState("")
@@ -9,7 +12,7 @@ const Header = ({handleSearch, loader}) => {
   return (
     <div>
         <input onChange={handleChange} type='text'></input>
-        <button disabled={loader} onClick={onSearch}>
+        <button id='btn' disabled={loader} onClick={onSearch}>
           {loader ? "Loading..." : "Search"}
         </button>
     </div>

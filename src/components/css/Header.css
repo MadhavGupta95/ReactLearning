@@ -1,0 +1,16 @@
+/* THE CSS FILES IN THE REACT IS CALLED CSS MODULES */
+
+#btn {
+  background-color: crimson;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  width: 70px;
+  height: 30px;
+  border: none;
+  border-radius: 100px;
+}
+
+#btn:hover {
+  width: 60px;
+  height: 60px;
+}
