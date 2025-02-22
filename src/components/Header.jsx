@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Header = ({handleSearch}) => {
+const Header = ({handleSearch, loader}) => {
     const [query, setQuery] = useState("")
     const handleChange = (e)=>setQuery(e.target.value)
     const onSearch = ()=>{
@@ -9,7 +9,9 @@ const Header = ({handleSearch}) => {
   return (
     <div>
         <input onChange={handleChange} type='text'></input>
-        <button onClick={onSearch}>search</button>
+        <button disabled={loader} onClick={onSearch}>
+          {loader ? "Loading..." : "Search"}
+        </button>
     </div>
   )
 }

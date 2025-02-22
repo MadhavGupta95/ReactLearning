@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Recipe = (recipe) => {
+const Recipe = ({recipe}) => {
   return (
     <div>
-        <h3>{recipe.label}</h3>
+        <h3>{recipe.title}:</h3>
+        <p>{recipe.ingredients}</p>
     </div>
   )
 }
